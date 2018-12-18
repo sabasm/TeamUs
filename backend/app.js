@@ -32,7 +32,7 @@ mongoose
   
   app.use(cors({
     credentials:true,
-    origin:["https://teamus-sabasmendivil.firebaseapp.com/","http://localhost:3001"]
+    origin: true
   }))
   
   // Middleware Setup
