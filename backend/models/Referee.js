@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const passport = require('passport-local-mongoose');
 
-const userSchema = new Schema({
+const refereeSchema = new Schema({
   name: String,
   img:String,
+  profession:String,
   username: {
     type: String,
     unique: true,
@@ -13,19 +14,7 @@ const userSchema = new Schema({
     type: String,
     unique: true,
   },
-  premium: {
-    type: Boolean,
-    default: false
-  },
-  premiumDateStart: {
-    type: Date,
-    default: new Date()
-  },
-  clubs: {
-    type: [String],
-    default: []
-  },
-  sportsStats: {
+  refSportsStats: {
     type: [String],
     default: []
   },
@@ -47,8 +36,16 @@ const userSchema = new Schema({
       },
       teamUsRating:{
         type:String,
-        default:"Novato"
+        default:"Nuevo en la app"
       },
+      cv:{
+        type:[String],
+        default:[]
+      },
+      exp:{
+        type:[String],
+        default:[]
+      },      
       games: {
         type: [String],
         default: []
@@ -64,4 +61,4 @@ userSchema.plugin(passport, {
   usernameField: 'email'
 })
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('Referee', refereeSchema)
