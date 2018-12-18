@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const host = 'http://localhost:3000/auth'
+const host = 'https://teamus.herokuapp.com/auth'
 
 //signup
 export const signup = (user) => {
@@ -34,4 +34,4 @@ export const getProfile = () =>{
             return e.response
             
         })
-}
+} 
