@@ -6,8 +6,8 @@ const LoginForm = ({login, handleText}) => {
       Login
       <form method="POST" onSubmit={login}>
         <p>
-            Email:
-            <input type="email" name="email" onChange={handleText}/>
+            Usuario:
+            <input type="text" name="username" onChange={handleText}/>
         </p>
         <p>
             Password:

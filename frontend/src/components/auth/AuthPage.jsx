@@ -15,6 +15,7 @@ class AuthPage extends Component {
         signup(user)
             .then(r=>{
                 console.log(r)
+                this.props.history.push('/login')
             }).catch(e=>{
                 console.log(e)
             })

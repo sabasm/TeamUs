@@ -6,8 +6,12 @@ const SignupForm = ({signup, handleText}) => {
       Signup
       <form method="POST" onSubmit={signup}>
         <p>
-            Name:
-            <input type="text" name="name" onChange={handleText}/>
+            Usuario:
+            <input type="text" name="username" onChange={handleText}/>
+        </p>
+        <p>
+            Nombre:
+            <input type="text" name="personalData.name" onChange={handleText}/>
         </p>
         <p>
             Email:
