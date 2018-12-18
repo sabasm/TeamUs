@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const host = 'https://teamus.herokuapp.com/auth'
+    const host='http://localhost:3000/auth'
+
+//production host = 'https://teamus-sabasmendivil.firebaseapp.com/auth
 
 //signup
 export const signup = (user) => {
