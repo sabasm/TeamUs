@@ -11,9 +11,11 @@ const path         = require('path');
 
 
 mongoose
-  .connect('mongodb://localhost/backend', {useNewUrlParser: true})
+  .connect(process.env.DB, {
+    useNewUrlParser: true
+  })
   .then(x => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    console.log(`Conectado a MLAB teamus DB`)
   })
   .catch(err => {
     console.error('Error connecting to mongo', err)
